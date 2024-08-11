@@ -1,0 +1,466 @@
+{
+	"info": {
+		"_postman_id": "b20c5759-8503-4fbd-bd30-541d6a316768",
+		"name": "Formula 1 API",
+		"description": "Postman collection for Formula 1 API routes.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2514897"
+	},
+	"item": [
+		{
+			"name": "Driver Routes",
+			"item": [
+				{
+					"name": "Get Drivers with Most Wins",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVldXN0dW5lbCIsImlkIjoyLCJpYXQiOjE3MjMzOTMxOTd9.clg1T-zdpDmq8H3W5hmyZ_rXjSf5OIhFY3oICKgifsw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <your-token>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/drivers/most-wins",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"drivers",
+								"most-wins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Driver Podium Counts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVldXN0dW5lbCIsImlkIjoyLCJpYXQiOjE3MjMzOTMxOTd9.clg1T-zdpDmq8H3W5hmyZ_rXjSf5OIhFY3oICKgifsw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <your-token>",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/drivers/podium-counts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"drivers",
+								"podium-counts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Driver DNF Counts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVldXN0dW5lbCIsImlkIjoyLCJpYXQiOjE3MjMzOTMxOTd9.clg1T-zdpDmq8H3W5hmyZ_rXjSf5OIhFY3oICKgifsw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <your-token>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/drivers/dnf-counts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"drivers",
+								"dnf-counts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Drivers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVldXN0dW5lbCIsImlkIjoyLCJpYXQiOjE3MjMzOTMxOTd9.clg1T-zdpDmq8H3W5hmyZ_rXjSf5OIhFY3oICKgifsw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <your-token>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/drivers?forename=lewis",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"drivers"
+							],
+							"query": [
+								{
+									"key": "forename",
+									"value": "lewis"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Season Routes",
+			"item": [
+				{
+					"name": "Get Seasons with Most Podiums",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVldXN0dW5lbCIsImlkIjoyLCJpYXQiOjE3MjMzOTMxOTd9.clg1T-zdpDmq8H3W5hmyZ_rXjSf5OIhFY3oICKgifsw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <your-token>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/seasons/most-podiums",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"seasons",
+								"most-podiums"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Seasons with Most Wins",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVldXN0dW5lbCIsImlkIjoyLCJpYXQiOjE3MjMzOTMxOTd9.clg1T-zdpDmq8H3W5hmyZ_rXjSf5OIhFY3oICKgifsw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <your-token>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/seasons/most-wins",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"seasons",
+								"most-wins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Seasons",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVldXN0dW5lbCIsImlkIjoyLCJpYXQiOjE3MjMzOTMxOTd9.clg1T-zdpDmq8H3W5hmyZ_rXjSf5OIhFY3oICKgifsw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <your-token>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/seasons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"seasons"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Team Routes",
+			"item": [
+				{
+					"name": "Get Teams with Most Wins",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVldXN0dW5lbCIsImlkIjoyLCJpYXQiOjE3MjMzOTMxOTd9.clg1T-zdpDmq8H3W5hmyZ_rXjSf5OIhFY3oICKgifsw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <your-token>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/teams/most-wins",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teams",
+								"most-wins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Teams with Most Podiums",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVldXN0dW5lbCIsImlkIjoyLCJpYXQiOjE3MjMzOTMxOTd9.clg1T-zdpDmq8H3W5hmyZ_rXjSf5OIhFY3oICKgifsw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <your-token>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/teams/most-podiums",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teams",
+								"most-podiums"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Teams",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVldXN0dW5lbCIsImlkIjoyLCJpYXQiOjE3MjMzOTMxOTd9.clg1T-zdpDmq8H3W5hmyZ_rXjSf5OIhFY3oICKgifsw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <your-token>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/teams",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teams"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Routes",
+			"item": [
+				{
+					"name": "User Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"eeustunel\",\n    \"password\": \"q1w2e3r4\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"egeustunel@gmail.com\",\n    \"username\": \"eeustunel\",\n    \"password\": \"q1w2e3r4\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
