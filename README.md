@@ -19,9 +19,29 @@ The Formula 1 API provides endpoints for accessing various statistics related to
   - `userController.ts`: Handles user authentication and registration.
 
 - **Middlewares**:
-  - `authMiddleware.ts`: Middleware for handling authentication.
+  - `authMiddleware.ts`: Middleware for handling authenticatio n.
 
 ## Setup
 
 ### Installation
 
+Below command creates Postgres DB, creates required tables and seeds them with the given csv files.
+
+```sh
+docker-compose up -d
+```
+
+To run the Node project 
+
+```sh
+npm install
+npm run build
+npm start
+```
+
+### Postman Collection
+
+You can find the postman collection in the root directory of the project.
+```
+Formula 1 API.postman_collection.json
+```
